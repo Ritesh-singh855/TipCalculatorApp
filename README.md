@@ -1,5 +1,110 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+Tip Calculator App
+
+Overview
+
+The Tip Calculator App is a React Native application that helps users calculate tips based on their bill amount. It uses Redux for state management and Redux Persist for maintaining state across app restarts.
+
+Features
+
+Calculate tip based on bill amount and selected percentage
+Choose from preset tip percentages (5%, 10%, 15%, 25%, 50%)
+Split the bill between multiple people
+Display total amount (bill + tip)
+Display tip amount separately
+Show amount per person
+Persist state across app restarts
+
+Component: TipCalculator
+The TipCalculator component is the main interface of the app. Here's a breakdown of its functionality:
+State Management
+The component uses Redux for state management. It accesses the following state variables:
+
+billAmount: The total bill amount entered by the user
+tipPercentage: The selected tip percentage
+numberOfPeople: The number of people splitting the bill
+
+Input Handling
+
+Bill Amount:
+
+Uses handleSetBillAmount function
+Validates input to ensure it's a positive number
+Displays an error message for invalid input
+
+
+Tip Percentage:
+
+Uses handleSetTipPercentage function
+Allows selection from preset percentages
+
+
+Number of People:
+
+Uses handleSetNumberOfPeople function
+Validates input to ensure it's a positive integer
+Displays an error message for invalid input
+
+
+
+Calculations
+
+calculateTip(): Calculates the tip amount based on bill and tip percentage
+calculateTotal(): Calculates the total amount (bill + tip)
+calculatePerPerson(): Calculates the amount each person should pay
+
+UI Components
+
+Text inputs for bill amount and number of people
+Buttons for selecting tip percentage
+Display areas for showing calculated amounts
+
+Redux Structure
+The app uses a modular Redux structure with the following files:
+
+constants.js: Defines action types
+actions.js: Contains action creators
+reducer.js: Defines how the state changes in response to actions
+rootReducer.js: Combines multiple reducers (if applicable)
+store.js: Creates the Redux store and sets up Redux Persist
+
+Redux Persist
+Redux Persist is used to save the Redux store to AsyncStorage, allowing the app to maintain its state even after being closed. This means that when a user reopens the app, their previous inputs and calculations will still be available.
+Key points about Redux Persist in this app:
+
+The entire root reducer is persisted
+AsyncStorage is used as the storage engine
+The persistor is created in store.js and wrapped around the app in App.js
+
+Usage
+To use the Tip Calculator:
+
+Enter the bill amount in the first input field
+Select a tip percentage by tapping one of the percentage buttons
+If splitting the bill, enter the number of people
+The app will automatically calculate and display:
+
+Tip amount
+Total amount (bill + tip)
+Amount per person (if splitting)
+
+
+
+Installation and Setup
+
+Clone the repository
+Run npm install to install dependencies
+Run npx react-native run-android or npx react-native run-ios to start the app
+
+Dependencies
+
+React Native
+Redux
+React Redux
+Redux Persist
+@react-native-async-storage/async-storage
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
