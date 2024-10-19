@@ -1,7 +1,9 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-                                                                                               Tip Calculator App
+Tip Calculator App
+
 Overview
+
 The Tip Calculator App is a React Native application that helps users calculate tips based on their bill amount. It uses Redux for state management and Redux Persist for maintaining state across app restarts.
 
 Features
