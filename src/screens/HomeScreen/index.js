@@ -89,6 +89,7 @@ const TipCalculator = () => {
             style={styles.input}
             placeholder="Number of people"
             keyboardType="numeric"
+            maxLength={4}
             value={numberOfPeople}
             onChangeText={handleSetNumberOfPeople}
           />
