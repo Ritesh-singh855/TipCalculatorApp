@@ -15,7 +15,6 @@ const TipCalculator = () => {
   );
   const [isNumberOfPeopleValid, setIsNumberOfPeopleValid] = useState(true);
   const [isBillAmountValid, setIsBillAmountValid] = useState(true);
-  const [isShowNumberOfPeople, setIsShowNumberOfPeople] = useState(true);
 
   const handleSetBillAmount = amount => {
     if (amount === '' || parseFloat(amount) > 0) {
